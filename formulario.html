@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="formulario.css"> <!--Tag LINK é a ligação entre outros documentos e o HTML-->
+    <title>Cadastro</title>
+  </head>
+  <body>
+<div class="page">
+</div>
+<div>
+    <h1 id="título">Cadastro de DEVs</h1>  
+    <p id="subtítulo">Complete suas informações</p>
+    <br>
+</div>
+  
+  <form>
+  
+    <fieldset class="grupo">
+
+    <div>
+    <label for="name"><strong>Nome</strong></label>
+    <input type="text" id="name" required>
+
+<div class="campo">
+  <label for="sobrenome"><strong>Sobrenome</strong></label>
+  <input type="text" id="sobrenome" required>
+</div>
+
+<div class="campo">
+  <label for="email"><strong>Email</strong></label>
+  <input type="email" id="email" required>
+</div>
+
+<div class="campo">
+  <label for="senha">Senha</label>
+  <input type="senha" id="senha">
+</div>
+
+<br>
+
+<fieldset class="grupo">  
+
+<div class="campo">
+  <legend> Seus horários disponíveis</legend>       <!--Junto com o fieldset vem sempre o <LEGEND>-->
+  </div>
+
+  <div class="campo">
+    <legend>Primeira Mentoria</legend>
+</div>
+
+<div class="col-3">
+  <label for="date"><strong>Data</strong></label>
+  <input type="date" id="Data">      <!--colocar input "date" para aparecer opção de data no browser-->
+</div>
+
+<div class="col-3">
+  <label for="event-begin">Das</label> 
+  <input type="time" id="event-begin"/>       <!--colocar input "time" para aparecer opção de horário no browser-->
+</div>
+
+<div class="col-3">
+  <label for="end"><strong>Até</strong></label> 
+  <input type="time" id="end"/>       <!--colocar input "time" para aparecer opção de horário no browser-->
+</div>
+
+
+<div class="campo">
+<legend>Segunda Mentoria</legend>
+</div>
+
+<div class="col-3">
+  <label for="date"><strong>Data</strong></label>               <!--colocar input "date" para aparecer opção de data no browser-->
+  <input type="date" id="Data">
+</div>
+
+<div class="col-3">
+  <label for="data"><strong>Das</strong></label>
+  <input type="time" id="Das">                <!--colocar input "time" para aparecer opção de horário no browser-->
+</div>
+
+<div class="col-3">
+  <label for="Até"><strong>Até</strong></label>
+  <input type="time" id="Data">                <!--colocar input "time" para aparecer opção de horário no browser-->
+</div>
+
+<div>
+
+<label><strong>Você torce pra qual destes times?</strong></label>
+
+<label>
+  <input type="radio" name="time" value="São Paulo">São Paulo
+</label>
+<input type="radio" name="time" value="Cruzeiro">Cruzeiro
+</div>
+
+<div class="campo">
+  <label for="senioridade"><strong>senioridade</strong></label>
+  <select id="senioridade">
+    <option selected disabled value="">Selecione</option> <!--Pra indicar que precisa selecionar pra escolher os itens abaixo-->
+  <option>Junior</option>
+  <option>Pleno</option>
+  <option>Senior</option>
+</select>
+</div>
+
+<fieldset class="grupo"> <!--Vou agrupar vários atributos que no caso é o label, com o fieldset-->
+<div id="checkbox"> <!--fiz um quadrado-->
+  <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br><!--Dentro do quadrado tá escrito isso, dei um espaço e embaixo vai vir os atributos-->
+  <input type="radio" name="devweb" value="HTML"> <!--fiz o botão já mandando o valor ao clicar nessa opção através do id-->
+  <label type="radio name"devweb"  value="backend">HTML</label> <!--Aqui eu criei o valor do botão que criei no input.-->
+
+  <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+  <label for="tecnologia2">CSS</label>
+  
+  <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JAVASCRIPT">
+  <label for="tecnologia3">JAVASCRIPT</label>
+</div>
+</fieldset>
+<div class="campo">
+  <br>
+<label><strong>Conte um pouco sobre sua experiência?</strong></label>
+<textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>  <!--Textarea= uma caixa de texto /  rows= quantidade de linha  / style= altura "em" é uma unidade de medida-->
+</div>
+
+<button class="botao" type="submit">Concluído</button> <!--button type submit é o campo que envia o formulário-->
+
+
+</form>
+</body>
+</html>
